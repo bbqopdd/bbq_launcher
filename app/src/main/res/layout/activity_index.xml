@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:id="@+id/main_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.bbq.textlauncher.widget.SmartScrollView
+        android:id="@+id/nest_scroll_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/view_weather_widget"
+                layout="@layout/view_time_and_weather" />
+
+            <include
+                android:id="@+id/view_commonly"
+                layout="@layout/view_commonly_module" />
+
+        </LinearLayout>
+
+    </com.bbq.textlauncher.widget.SmartScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:background="@drawable/icon_round_shape"
+        android:src="@drawable/ic_baseline_search_24"
+        app:backgroundTint="@color/gray_bg"
+        app:layout_behavior="com.bbq.textlauncher.widget.FabScrollBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
